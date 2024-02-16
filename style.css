@@ -73,6 +73,10 @@ button {
   width: 150px;
 }
 
+.toggler:hover {
+  cursor: pointer;
+}
+
 .hero-title {
   font-weight: 700;
   font-size: min(7vw, 2.5rem);

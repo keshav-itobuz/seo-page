@@ -85,6 +85,12 @@ button {
   width: 150px;
 }
 
+.toggler{
+  &:hover{
+    cursor: pointer
+  }
+}
+
 // hero section start
 
 @include font-style(hero-title, 700, min(7vw, 2.5rem), $heading-color);
