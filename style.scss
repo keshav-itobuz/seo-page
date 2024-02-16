@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@400;500;600&family=Work+Sans:wght@400;600;700&display=swap");
+
+$button-color: #fad725;
+$heading-blue-color: #6f77f1;
+$content-color: #828282;
+$main-heading-font: Inter;
+$content-font: Poppins;
+$benefits-section-color: #666565;
+$heading-color: #212528;
+$content-color: #727272;
+
+@mixin font-style($name, $weight, $size, $color) {
+  .#{$name} {
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+  }
+}
+
+@mixin dot-design($name, $color, $width, $height) {
+  .#{$name} {
+    background-color: $color;
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+body {
+  font-size: 65%;
+}
+
+input {
+  outline: none;
+}
+
+// ------------------------generic class---------------------------
+@include font-style(sub-heading, 500, 2rem, $heading-color);
+@include font-style(content, 400, min(4.5vw, 1rem), $content-color);
+@include font-style(card-title, 500, 1.2rem, $heading-color);
+
+button {
+  border: none !important;
+}
+
+.button-color {
+  background-color: $button-color !important;
+}
+
+.subheading {
+  font-size: 50px;
+}
+
+.blue-text {
+  color: $heading-blue-color !important;
+}
+
+.void-size {
+  margin-top: 100px !important;
+}
+
+// nav section start
+
+@include font-style(navbar-logo, 500, 30px, $heading-color);
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #bc424e;
+  border-radius: 100%;
+  margin: 20px 0 0 2px;
+}
+
+.nav-search {
+  outline: none;
+  border-color: $heading-color;
+  color: $heading-color;
+  width: 150px;
+}
+
+// hero section start
+
+@include font-style(hero-title, 700, min(7vw, 2.5rem), $heading-color);
+@include font-style(hero-content, 400, min(3.3vw, 1.1rem), $content-color);
+@include font-style(tilt-text, 600, min(5vw, 1.8rem), $heading-blue-color);
+
+.tilt-text {
+  border: 2px solid $heading-blue-color;
+  display: inline-block;
+  transform: rotate(-8.234deg);
+}
+
+.tilt-text::before {
+  content: ".";
+  font-size: 60px;
+  position: absolute;
+  top: -52px;
+  right: -8px;
+}
+
+.tilt-text::after {
+  content: ".";
+  font-size: 60px;
+  position: absolute;
+  bottom: -20px;
+  right: -8px;
+}
+
+.circle::before {
+  content: ".";
+  font-size: 60px;
+  position: absolute;
+  bottom: -20px;
+  left: -8px;
+}
+
+.circle::after {
+  content: ".";
+  font-size: 60px;
+  position: absolute;
+  top: -52px;
+  left: -8px;
+}
+
+.girl-image {
+  width: 100%;
+}
+
+.creative-team {
+  width: 225px;
+  bottom: 30px;
+  left: -80px;
+}
+
+// management section start
+
+@include font-style(management-title, 400, min(6vw, 2rem), $heading-color);
+@include font-style(management-content, 400, min(3.2vw, 1rem), $heading-color);
+
+// optimization section start
+#research-card {
+  background: url(images/optimisation/1.svg) no-repeat center;
+}
+
+#content-card {
+  background: url("./images/optimisation/2.svg") no-repeat center;
+}
+
+#target-card {
+  background: url("./images/optimisation/3.svg") no-repeat center;
+}
+
+#testing-card {
+  background: url("./images/optimisation/4.svg") no-repeat center;
+}
+
+.optimisation-card {
+  &:hover {
+    box-shadow: 0px 10px 14px 2px rgba(14, 17, 60, 0.03);
+    background-color: white !important;
+    border-bottom: 2px solid $heading-blue-color;
+    cursor: pointer;
+  }
+}
+
+.optimisation-circle {
+  width: 30vw;
+  right: 0;
+  bottom: -5px;
+}
+
+// business section start
+
+.business-card {
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 34px 50px -17px rgba(2, 22, 5, 0.1);
+  }
+}
+
+// chooser section start
+.chooser-content {
+  max-width: 780px;
+  transition: transform 300ms ease-in-out;
+}
+
+.chooser-card {
+  transition: transform 500ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 34px 50px -17px rgba(2, 22, 5, 0.1);
+    transform: scale(1.03);
+  }
+}
+
+// needs section start
+
+.needs-card:hover {
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 5px 25px 37px 0px rgba(2, 22, 5, 0.06);
+}
+
+//stats  section start
+@include font-style(stats-heading, 600, 10vw, $benefits-section-color);
+@include dot-design(red-dot, #d1563b, 10px, 10px);
+@include dot-design(green-dot, #3bd165, 10px, 10px);
+@include dot-design(yellow-dot, #f7c745, 10px, 10px);
+
+// plans section start
+.plan-card {
+  transition: transform 300ms ease-in-out;
+}
+
+.plan-card {
+  &:hover {
+    cursor: pointer;
+    background: url(./images/plans/blue-bg.svg) no-repeat center;
+    background-size: stretch;
+    span,
+    button {
+      color: white !important;
+    }
+  }
+
+  button:hover {
+    background-color: $button-color;
+    color: black !important;
+  }
+
+  transform: scale(1.05);
+}
+
+// expert section start
+.expert-card:hover {
+  cursor: pointer;
+  box-shadow: 0px 34px 50px -17px rgba(2, 22, 5, 0.1);
+}
+
+// client section start
+
+.client-data {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.client-card {
+  background-image: url(images/clients/quote.svg);
+  background-repeat: no-repeat;
+}
+
+.client-card:hover {
+  cursor: pointer;
+  box-shadow: 0px 34px 50px -17px rgba(2, 22, 5, 0.1);
+}
+
+// form section start
+.subscribe-button {
+  background-color: #6f77f1 !important;
+  color: white !important;
+}
+
+// bottom section start
+@include font-style(bottom-items, 400, 16px, #212528);
+
+// footer section start
+@include font-style(footer-text, 400, 10px, $content-color);
+
+// --------------------for tablet screen---------------------------
+
+@media (min-width: 768px) {
+  // hero section start
+
+  .hero-title {
+    font-size: min(4vw, 1.9rem);
+  }
+
+  .tilt-text {
+    font-size: min(2.5vw, 1.3rem);
+  }
+
+  .hero-content {
+    font-size: min(1.8vw, 0.6rem);
+  }
+
+  // management section start
+  .management-title {
+    font-size: min(2vw, 1rem);
+  }
+
+  .management-content {
+    font-size: min(3.2vw, 0.54rem);
+  }
+
+  // stats section start
+
+  .stats-heading {
+    font-size: min(8vw, 3rem);
+  }
+}
+
+// --------------------for laptop screen---------------------------
+
+@media (min-width: 992px) {
+  // nav section start
+
+  .nav-link {
+    border-bottom: 2px solid transparent !important;
+    &:hover {
+      border-bottom: 2px solid;
+      border-image: linear-gradient(
+        to right,
+        rgba(111, 119, 241, 1),
+        rgba(111, 119, 241, 1) 70%,
+        white 70%,
+        white 80%,
+        rgba(111, 119, 241, 1) 80%,
+        rgba(111, 119, 241, 1)
+      );
+      border-image-slice: 1;
+    }
+  }
+  // hero section start
+
+  .hero-title {
+    font-size: 4vw;
+  }
+
+  .tilt-text {
+    font-size: min(2.6vw, 2rem);
+  }
+
+  .hero-content {
+    font-size: min(1.8vw, 1rem);
+  }
+
+  // management section start
+
+  .management-title {
+    font-size: min(2.2vw, 2rem);
+  }
+
+  .management-content {
+    font-size: min(1vw, 0.9rem);
+  }
+}
+
+// ---------------------------------------------------------------
