@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@400;500;600&family=Work+Sans:wght@400;600;700&display=swap");
+:root {
+  --body-background-color: #fff;
+  --button-color: #fad725;
+  --heading-blue-color: #6f77f1;
+  --content-color: #828282;
+  --benefits-section-color: #666565;
+  --heading-color: #212528;
+  --section-color:#f6f6f6;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -8,6 +18,8 @@
 
 body {
   font-size: 65%;
+  background-color: var(--body-background-color) !important;
+  color: var(--heading-color) !important;
 }
 
 input {
@@ -17,19 +29,19 @@ input {
 .sub-heading {
   font-weight: 500;
   font-size: 2rem;
-  color: #212528;
+  color: var(--heading-color);
 }
 
 .content {
   font-weight: 400;
   font-size: min(4.5vw, 1rem);
-  color: #727272;
+  color: var(--content-color);
 }
 
 .card-title {
   font-weight: 500;
   font-size: 1.2rem;
-  color: #212528;
+  color: var(--heading-color);
 }
 
 button {
@@ -37,7 +49,7 @@ button {
 }
 
 .button-color {
-  background-color: #fad725 !important;
+  background-color: var(--button-color) !important;
 }
 
 .subheading {
@@ -45,7 +57,7 @@ button {
 }
 
 .blue-text {
-  color: #6f77f1 !important;
+  color: var(--heading-blue-color) !important;
 }
 
 .void-size {
@@ -55,7 +67,7 @@ button {
 .navbar-logo {
   font-weight: 500;
   font-size: 30px;
-  color: #212528;
+  color: var(--heading-color);
 }
 
 .dot {
@@ -68,35 +80,55 @@ button {
 
 .nav-search {
   outline: none;
-  border-color: #212528;
-  color: #212528;
+  border-color: var(--heading-color);
+  color: var(--heading-color);
   width: 150px;
 }
 
-.toggler:hover {
+.toggler {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
   cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.nav-link {
+  color: var(--heading-color) !important;
 }
 
 .hero-title {
   font-weight: 700;
   font-size: min(7vw, 2.5rem);
-  color: #212528;
+  color: var(--heading-color);
 }
 
 .hero-content {
   font-weight: 400;
   font-size: min(3.3vw, 1.1rem);
-  color: #727272;
+  color: var(--content-color);
 }
 
 .tilt-text {
   font-weight: 600;
   font-size: min(5vw, 1.8rem);
-  color: #6f77f1;
+  color: var(--heading-blue-color);
 }
 
 .tilt-text {
-  border: 2px solid #6f77f1;
+  border: 2px solid var(--heading-blue-color);
   display: inline-block;
   transform: rotate(-8.234deg);
 }
@@ -141,40 +173,28 @@ button {
   width: 225px;
   bottom: 30px;
   left: -80px;
+  background-color: var(--body-background-color);
 }
 
 .management-title {
   font-weight: 400;
   font-size: min(6vw, 2rem);
-  color: #212528;
+  color: var(--heading-color);
 }
 
 .management-content {
   font-weight: 400;
   font-size: min(3.2vw, 1rem);
-  color: #212528;
+  color: var(--heading-color);
 }
 
-#research-card {
-  background: url(images/optimisation/1.svg) no-repeat center;
+.optimisation-card {
+  border-bottom: 2px solid var(--body-background-color);
 }
-
-#content-card {
-  background: url("./images/optimisation/2.svg") no-repeat center;
-}
-
-#target-card {
-  background: url("./images/optimisation/3.svg") no-repeat center;
-}
-
-#testing-card {
-  background: url("./images/optimisation/4.svg") no-repeat center;
-}
-
 .optimisation-card:hover {
   box-shadow: 0px 10px 14px 2px rgba(14, 17, 60, 0.03);
-  background-color: white !important;
-  border-bottom: 2px solid #6f77f1;
+  background-color: var(--body-background-color) !important;
+  border-bottom: 2px solid var(--heading-blue-color);
   cursor: pointer;
 }
 
@@ -182,6 +202,10 @@ button {
   width: 30vw;
   right: 0;
   bottom: -5px;
+}
+
+.advertisment-section {
+  background-color: var(--section-color);
 }
 
 .business-card {
@@ -192,6 +216,10 @@ button {
   box-shadow: 0px 34px 50px -17px rgba(2, 22, 5, 0.1);
 }
 
+.chooser-section {
+  background-color: var(--section-color);
+}
+
 .chooser-content {
   max-width: 780px;
   transition: transform 300ms ease-in-out;
@@ -199,6 +227,7 @@ button {
 
 .chooser-card {
   transition: transform 500ms ease-in-out;
+  background-color: var(--body-background-color) !important;
 }
 .chooser-card:hover {
   cursor: pointer;
@@ -208,7 +237,7 @@ button {
 
 .needs-card:hover {
   border-radius: 4px;
-  background: #fff;
+  background: var(--section-color);
   cursor: pointer;
   box-shadow: 5px 25px 37px 0px rgba(2, 22, 5, 0.06);
 }
@@ -216,7 +245,7 @@ button {
 .stats-heading {
   font-weight: 600;
   font-size: 10vw;
-  color: #666565;
+  color: var(--benefits-section-color);
 }
 
 .red-dot {
@@ -240,24 +269,29 @@ button {
   border-radius: 50%;
 }
 
-.plan-card {
-  transition: transform 300ms ease-in-out;
+.plans-section {
+  background-color: var(--section-color);
 }
 
 .plan-card {
-  transform: scale(1.05);
+  transition: transform 500ms ease-in-out;
+  background-color: var(--body-background-color) !important;
 }
 .plan-card:hover {
+  transform: scale(1.05);
   cursor: pointer;
   background: url(./images/plans/blue-bg.svg) no-repeat center;
   background-size: stretch;
 }
 .plan-card:hover span,
 .plan-card:hover button {
-  color: white !important;
+  color: #fff !important;
+}
+.plan-card button {
+  color: var(--heading-color) !important;
 }
 .plan-card button:hover {
-  background-color: #fad725;
+  background-color: var(--button-color);
   color: black !important;
 }
 
@@ -283,9 +317,13 @@ button {
   box-shadow: 0px 34px 50px -17px rgba(2, 22, 5, 0.1);
 }
 
+.form-section {
+  background-color: var(--section-color);
+}
+
 .subscribe-button {
   background-color: #6f77f1 !important;
-  color: white !important;
+  color: #fff !important;
 }
 
 .bottom-items {
@@ -294,10 +332,14 @@ button {
   color: #212528;
 }
 
+.bottom-items {
+  color: var(--heading-color) !important;
+}
+
 .footer-text {
   font-weight: 400;
   font-size: 10px;
-  color: #727272;
+  color: var(--content-color);
 }
 
 @media (min-width: 768px) {

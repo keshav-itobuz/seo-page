@@ -40,8 +40,10 @@
                         <a class="nav-link " href="#">Contact</a>
                     </li>
                 </ul>
-                <div class="form-check form-switch">
-                    <input class="form-check-input toggler" type="checkbox" id="flexSwitchCheckDefault">
+                <div class="toggleContainer">
+                    <div class="toggler" id="toggler">
+                        <div class="slider" id="slider"></div>
+                    </div>
                 </div>
                 <form class="d-flex" role="search">
                     <input class="me-2 text-center rounded-1 nav-search py-1" type="search" placeholder="Let's Talk"
@@ -75,7 +77,7 @@
                 distracted.
             </p>
             <div>
-                <button class="btn button-color rounded-1 px-3 py-2 me-3 me-lg-5">
+                <button class="button-color rounded-1 px-3 py-2 me-3 me-lg-5">
                     Get Started
                 </button>
                 <img src="./images/hero-section/tour.svg" alt="Take a tour" />
@@ -83,8 +85,8 @@
         </div>
         <div class="col-12 col-md-6 order-1 order-md-2 my-md-auto position-relative">
             <img src="./images/hero-section/girl.png" alt="girl" class="girl-image" />
-            <div class="border creative-team position-absolute p-2 bg-white d-none d-lg-block ">
-                <h6>Our Creative Team</h6>
+            <div class="border creative-team position-absolute p-2 d-none d-lg-block ">
+                <h6 class="card-title mb-2">Our Creative Team</h6>
                 <div>
                     <img src="./images/creative-team/man1.svg" alt="man-1">
                     <img src="./images/creative-team/man2.svg" alt="man-1" style="margin-left: -20px;">
@@ -100,7 +102,7 @@
 
     <section class="container management-section row mx-auto void-size gap-4 gap-md-0">
         <div class="management-card col-12 col-md-4">
-            <div class="p-3 shadow bg-body-tertiary rounded">
+            <div class="p-3 shadow  rounded">
                 <div class="row">
                     <img src="./images/management/social-media.svg" alt="social-media" class="col-3" />
                     <h3 class="col-9 management-title">Social Media Management</h3>
@@ -115,7 +117,7 @@
             </div>
         </div>
         <div class="management-card col-12 col-md-4">
-            <div class="p-3 shadow bg-body-tertiary rounded">
+            <div class="p-3 shadow rounded">
                 <div class="row">
                     <img src="./images/management/email.svg" alt="social-media" class="col-3" />
                     <h3 class="col-9 management-title">
@@ -133,7 +135,7 @@
             </div>
         </div>
         <div class="management-card col-12 col-md-4">
-            <div class="p-3 shadow bg-body-tertiary rounded">
+            <div class="p-3 shadow rounded">
                 <div class="row">
                     <img src="./images/management/seo.svg" alt="social-media" class="col-3" />
                     <h3 class="col-9 management-title">
@@ -165,7 +167,7 @@
         </p>
         <div class="row my-5 mx-0 ms-sm-5 ms-md-0 ">
             <div class="col-12 col-md-6 col-lg-3 mt-3 mt-lg-0">
-                <div class="optimisation-card px-4 py-5 " id="research-card">
+                <div class="optimisation-card px-4 py-5 " >
                     <img src="./images/optimisation/key-search.svg" alt="Keyword Research" />
                     <h3 class="card-title mt-5 mb-3 pt-5">Keyword Research</h3>
                     <p class="content">
@@ -176,7 +178,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-3 mt-3 mt-lg-0">
-                <div class="optimisation-card px-4 py-5 " id="content-card">
+                <div class="optimisation-card px-4 py-5 ">
                     <img src="./images/optimisation/content.svg" alt="content Optimisation" />
                     <h3 class="card-title mt-5 mb-3 pt-5">Content Optimisation</h3>
                     <p class="content">
@@ -187,7 +189,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-3 mt-3 mt-lg-0 z-1">
-                <div class="optimisation-card px-4 py-5 " id="target-card">
+                <div class="optimisation-card px-4 py-5 ">
                     <img src="./images/optimisation/target.svg" alt="Target Analysis" />
                     <h3 class="card-title mt-5 mb-3 pt-5">Target Analysis</h3>
                     <p class="content">
@@ -198,7 +200,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-3 mt-3 mt-lg-0 testing-card z-1">
-                <div class="optimisation-card px-4 py-5 " id="testing-card">
+                <div class="optimisation-card px-4 py-5 ">
                     <img src="./images/optimisation/continuous.svg" alt="Continuous Testing" />
                     <h3 class="card-title mt-5 mb-3 pt-5">Continuous Testing</h3>
                     <p class="content">
@@ -213,7 +215,7 @@
 
     <!-- advertisment section -->
 
-    <section class=" advertisment-section void-size bg-body-tertiary">
+    <section class=" advertisment-section void-size">
         <div class="container row mx-auto py-5">
             <div class="col-12 col-md-5 ms-auto my-auto order-2 order-md-1 mt-5 mt-md-0">
                 <h2 class="sub-heading">
@@ -225,7 +227,7 @@
                     It is a long established .t is a long established fact that a reader
                     will be distracted by the readable content of .
                 </p>
-                <button class="btn button-color rounded-1 px-3 py-2">Learn More</button>
+                <button class=" button-color rounded-1 px-3 py-2">Learn More</button>
             </div>
             <img src="./images/ads/laptop.svg" alt="laptop" class="col-12 col-md-5 me-auto order-1 order-md-2" />
         </div>
@@ -277,7 +279,7 @@
 
     <!-- choosers section -->
 
-    <section class="chooser-section void-size text-center bg-body-tertiary py-5 row m-0">
+    <section class="chooser-section void-size text-center py-5 row m-0">
         <div class="container col-12 col-md-10">
             <h2 class="sub-heading pt-5">
                 Why You Should <span class="blue-text">Choose Us.</span>
@@ -337,7 +339,7 @@
                         </div>
                     </div>
                 </div>
-            </div class="pb-5">
+            </div>
         </div>
     </section>
 
@@ -449,13 +451,13 @@
 
     <!-- plan section -->
 
-    <section class="plans-section void-size  bg-body-tertiary mx-auto">
+    <section class="plans-section void-size mx-auto">
         <div class=" container py-5">
             <h2 class="sub-heading text-center col-12">Our Plans</h2>
             <p class="content text-center col-12 mb-5">Choose the right SEO for you</p>
             <div class="col-12  col-lg-9 mx-auto row">
                 <div class="col-12 col-md-4 mb-3 mb-md-0">
-                    <div class="d-flex flex-column align-items-center py-0 py-md-5 plan-card bg-white">
+                    <div class="d-flex flex-column align-items-center py-0 py-md-5 plan-card ">
                         <span class="content mt-5 blue-text">Plus</span>
                         <span class="sub-heading my-4"> <sup>$</sup>46/<sub>month</sub></span>
                         <span class="content mb-2">408GB Bandwidth</span>
@@ -466,7 +468,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-3 mb-md-0">
-                    <div class="d-flex flex-column align-items-center py-0 py-md-5 bg-white plan-card">
+                    <div class="d-flex flex-column align-items-center py-0 py-md-5 plan-card">
                         <span class="content mt-5 blue-text">Beginner</span>
                         <span class="sub-heading my-4"> <sup>$</sup>66/<sub>month</sub></span>
                         <span class="content mb-2">408GB Bandwidth</span>
@@ -477,7 +479,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-3 mb-md-0">
-                    <div class="d-flex flex-column align-items-center col-12 py-0 py-md-5 bg-white plan-card">
+                    <div class="d-flex flex-column align-items-center col-12 py-0 py-md-5 plan-card">
                         <span class="content mt-5 blue-text">Advanced</span>
                         <span class="sub-heading my-4"> <sup>$</sup>86/<sub>month</sub></span>
                         <span class="content mb-2">408GB Bandwidth</span>
@@ -612,7 +614,7 @@
     <!-- form section -->
 
     <section class="container-fluid container-md text-center form-section  void-size row mx-auto ">
-        <div class="col-12 col-lg-10 mx-auto bg-body-tertiary py-5">
+        <div class="col-12 col-lg-10 mx-auto py-5">
             <h2 class="sub-heading">Subscribe & Find The Perfect Cosmetics</h2>
             <p class="content pt-2 pb-4">Enter Your Email And Get Updated New Products & News</p>
             <form action="submit" class="d-flex flex-column flex-sm-row gap-3 justify-content-center w-100">
@@ -676,6 +678,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
