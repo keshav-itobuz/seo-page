@@ -189,6 +189,9 @@ button {
   bottom: 30px;
   left: -80px;
   background-color: var(--body-background-color);
+  :hover {
+    cursor: pointer;
+  }
 }
 
 // management section start
@@ -210,6 +213,11 @@ button {
 .management-card > div {
   background-color: var(--card-color) !important;
 }
+.management-arrow {
+  :hover {
+    cursor: pointer;
+  }
+}
 
 // optimization section start
 
@@ -227,6 +235,10 @@ button {
   width: 30vw;
   right: 0;
   bottom: -5px;
+}
+.numbers {
+  right: 25%;
+  top: 17%;
 }
 
 // advertisment section start

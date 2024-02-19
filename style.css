@@ -185,6 +185,9 @@ button {
   left: -80px;
   background-color: var(--body-background-color);
 }
+.creative-team :hover {
+  cursor: pointer;
+}
 
 .management-title {
   font-weight: 400;
@@ -202,6 +205,10 @@ button {
   background-color: var(--card-color) !important;
 }
 
+.management-arrow :hover {
+  cursor: pointer;
+}
+
 .optimisation-card {
   border-bottom: 2px solid var(--body-background-color);
 }
@@ -216,6 +223,11 @@ button {
   width: 30vw;
   right: 0;
   bottom: -5px;
+}
+
+.numbers {
+  right: 25%;
+  top: 17%;
 }
 
 .advertisment-section {
