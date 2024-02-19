@@ -1,10 +1,10 @@
-
 const rootElement = document.documentElement;
+// const cs = getComputedStyle(rootElement);
 const circle = document.getElementsByClassName("optimisation-circle")[0];
 const yellowCircle = document.getElementsByClassName("yellow-circle")[0];
 const toggler = document.getElementById("toggler");
 const slider = document.getElementById("slider");
-
+const navbarToggler = document.getElementsByClassName("navbar-toggler-icon")[0];
 
 let isToggled = false;
 
@@ -18,6 +18,7 @@ toggler.addEventListener('click', () => {
     rootElement.style.setProperty('--card-color', '#364958')
     rootElement.style.setProperty('--heading-color', ' #fff');
     toggler.style.backgroundColor = "#364958";
+    navbarToggler.classList.replace("navbar-light", "navbar-dark");
     circle.style.display = "None";
     yellowCircle.style.display = "None";
   }
@@ -28,6 +29,7 @@ toggler.addEventListener('click', () => {
     rootElement.style.setProperty('--card-color', '#fff')
     rootElement.style.setProperty('--heading-color', ' #212528');
     toggler.style.backgroundColor = "#ccc";
+    navbarToggler.classList.replace("navbar-dark", "navbar-light");
     circle.style.display = "block";
     yellowCircle.style.display = "block";
   }
