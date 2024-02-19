@@ -6,7 +6,8 @@
   --content-color: #828282;
   --benefits-section-color: #666565;
   --heading-color: #212528;
-  --section-color:#f6f6f6;
+  --section-color: #f6f6f6;
+  --card-color: #fff;
 }
 
 * {
@@ -52,8 +53,9 @@ button {
   background-color: var(--button-color) !important;
 }
 
-.subheading {
-  font-size: 50px;
+.sub-heading {
+  font-size: 28px;
+  color: var(--heading-color) !important;
 }
 
 .blue-text {
@@ -87,8 +89,8 @@ button {
 
 .toggler {
   position: relative;
-  width: 60px;
-  height: 30px;
+  width: 50px;
+  height: 25px;
   background-color: #ccc;
   border-radius: 15px;
   cursor: pointer;
@@ -96,10 +98,10 @@ button {
 
 .slider {
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 24px;
-  height: 24px;
+  top: 4px;
+  left: 5px;
+  width: 17px;
+  height: 17px;
   background-color: #fff;
   border-radius: 50%;
   transition: transform 0.3s;
@@ -188,12 +190,16 @@ button {
   color: var(--heading-color);
 }
 
+.management-card > div {
+  background-color: var(--card-color) !important;
+}
+
 .optimisation-card {
   border-bottom: 2px solid var(--body-background-color);
 }
 .optimisation-card:hover {
   box-shadow: 0px 10px 14px 2px rgba(14, 17, 60, 0.03);
-  background-color: var(--body-background-color) !important;
+  background-color: var(--card-color) !important;
   border-bottom: 2px solid var(--heading-blue-color);
   cursor: pointer;
 }

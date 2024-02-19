@@ -1,12 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@400;500;600&family=Work+Sans:wght@400;600;700&display=swap");
 
-// $button-color: #fad725;
-// $heading-blue-color: #6f77f1;
-// $content-color: #828282;
 $main-heading-font: Inter;
 $content-font: Poppins;
-// $benefits-section-color: #666565;
-// $heading-color: #212528;
 
 :root {
   --body-background-color: #fff;
@@ -15,10 +10,9 @@ $content-font: Poppins;
   --content-color: #828282;
   --benefits-section-color: #666565;
   --heading-color: #212528;
-  --section-color:#f6f6f6;
+  --section-color: #f6f6f6;
+  --card-color: #fff;
 }
-
-
 
 @mixin font-style($name, $weight, $size, $color) {
   .#{$name} {
@@ -67,8 +61,9 @@ button {
   background-color: var(--button-color) !important;
 }
 
-.subheading {
-  font-size: 50px;
+.sub-heading {
+  font-size: 28px;
+  color: var(--heading-color) !important;
 }
 
 .blue-text {
@@ -100,8 +95,8 @@ button {
 
 .toggler {
   position: relative;
-  width: 60px;
-  height: 30px;
+  width: 50px;
+  height: 25px;
   background-color: #ccc;
   border-radius: 15px;
   cursor: pointer;
@@ -109,24 +104,34 @@ button {
 
 .slider {
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 24px;
-  height: 24px;
+  top: 4px;
+  left: 5px;
+  width: 17px;
+  height: 17px;
   background-color: #fff;
   border-radius: 50%;
   transition: transform 0.3s;
 }
 
-.nav-link{
+.nav-link {
   color: var(--heading-color) !important;
 }
 
 // hero section start
 
 @include font-style(hero-title, 700, min(7vw, 2.5rem), var(--heading-color));
-@include font-style(hero-content, 400, min(3.3vw, 1.1rem), var(--content-color));
-@include font-style(tilt-text, 600, min(5vw, 1.8rem), var(--heading-blue-color));
+@include font-style(
+  hero-content,
+  400,
+  min(3.3vw, 1.1rem),
+  var(--content-color)
+);
+@include font-style(
+  tilt-text,
+  600,
+  min(5vw, 1.8rem),
+  var(--heading-blue-color)
+);
 
 .tilt-text {
   border: 2px solid var(--heading-blue-color);
@@ -179,8 +184,21 @@ button {
 
 // management section start
 
-@include font-style(management-title, 400, min(6vw, 2rem), var(--heading-color));
-@include font-style(management-content, 400, min(3.2vw, 1rem), var(--heading-color));
+@include font-style(
+  management-title,
+  400,
+  min(6vw, 2rem),
+  var(--heading-color)
+);
+@include font-style(
+  management-content,
+  400,
+  min(3.2vw, 1rem),
+  var(--heading-color)
+);
+.management-card > div {
+  background-color: var(--card-color) !important;
+}
 
 // optimization section start
 
@@ -188,7 +206,7 @@ button {
   border-bottom: 2px solid var(--body-background-color);
   &:hover {
     box-shadow: 0px 10px 14px 2px rgba(14, 17, 60, 0.03);
-    background-color: var(--body-background-color) !important;
+    background-color: var(--card-color) !important;
     border-bottom: 2px solid var(--heading-blue-color);
     cursor: pointer;
   }
@@ -201,9 +219,9 @@ button {
 }
 
 // advertisment section start
-.advertisment-section{
+.advertisment-section {
   background-color: var(--section-color);
-} 
+}
 
 // business section start
 
@@ -217,7 +235,7 @@ button {
 }
 
 // chooser section start
-.chooser-section{
+.chooser-section {
   background-color: var(--section-color);
 }
 .chooser-content {
@@ -252,13 +270,13 @@ button {
 @include dot-design(yellow-dot, #f7c745, 10px, 10px);
 
 // plans section start
-.plans-section{
+.plans-section {
   background-color: var(--section-color);
 }
 
 .plan-card {
   transition: transform 500ms ease-in-out;
-  background-color: var(--body-background-color)!important;
+  background-color: var(--body-background-color) !important;
   &:hover {
     transform: scale(1.05);
     cursor: pointer;
@@ -269,16 +287,14 @@ button {
       color: #fff !important;
     }
   }
-  button{
-    color: var(--heading-color)!important;
-
+  button {
+    color: var(--heading-color) !important;
   }
-  
+
   button:hover {
     background-color: var(--button-color);
     color: black !important;
   }
-
 }
 
 // expert section start
@@ -308,7 +324,7 @@ button {
 }
 
 // form section start
-.form-section{
+.form-section {
   background-color: var(--section-color);
 }
 .subscribe-button {
@@ -319,7 +335,7 @@ button {
 // bottom section start
 @include font-style(bottom-items, 400, 16px, #212528);
 .bottom-items {
-  color: var(--heading-color)!important
+  color: var(--heading-color) !important;
 }
 
 // footer section start
