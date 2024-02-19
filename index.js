@@ -1,4 +1,5 @@
 const rootElement = document.documentElement;
+const clientQuoteDesign = document.getElementsByClassName("client-card")
 const circle = document.getElementsByClassName("optimisation-circle")[0];
 const yellowCircle = document.getElementsByClassName("yellow-circle")[0];
 const toggler = document.getElementById("toggler");
@@ -20,6 +21,9 @@ toggler.addEventListener('click', () => {
     navbarToggler.classList.replace("navbar-light", "navbar-dark");
     circle.style.display = "None";
     yellowCircle.style.display = "None";
+    [...clientQuoteDesign].forEach(element => {
+      element.classList.remove('client-quote')
+    });
   }
 
   else {
@@ -31,6 +35,9 @@ toggler.addEventListener('click', () => {
     navbarToggler.classList.replace("navbar-dark", "navbar-light");
     circle.style.display = "block";
     yellowCircle.style.display = "block";
+    [...clientQuoteDesign].forEach(element => {
+      element.classList.add('client-quote')
+    });
   }
 });
 
