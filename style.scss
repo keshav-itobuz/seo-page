@@ -134,6 +134,7 @@ button {
   min(3.3vw, 1.1rem),
   var(--content-color)
 );
+
 @include font-style(
   tilt-text,
   600,
@@ -198,12 +199,14 @@ button {
   min(6vw, 2rem),
   var(--heading-color)
 );
+
 @include font-style(
   management-content,
   400,
   min(3.2vw, 1rem),
   var(--heading-color)
 );
+
 .management-card > div {
   background-color: var(--card-color) !important;
 }
@@ -295,6 +298,7 @@ button {
       color: #fff !important;
     }
   }
+
   button {
     color: var(--heading-color) !important;
   }
@@ -330,6 +334,7 @@ button {
   cursor: pointer;
   box-shadow: 0px 34px 50px -17px rgba(2, 22, 5, 0.1);
 }
+
 .client-scroller > span {
   display: inline-block;
   width: 10px;
@@ -337,13 +342,16 @@ button {
   border-radius: 50%;
   background-color: var(--section-color);
 }
+
 .active-client-page {
   background-color: var(--heading-blue-color) !important;
 }
+
 // form section start
 .form-section {
   background-color: var(--section-color);
 }
+
 .subscribe-button {
   background-color: #6f77f1 !important;
   color: #fff !important;

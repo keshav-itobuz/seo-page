@@ -1,5 +1,4 @@
 const rootElement = document.documentElement;
-// const cs = getComputedStyle(rootElement);
 const circle = document.getElementsByClassName("optimisation-circle")[0];
 const yellowCircle = document.getElementsByClassName("yellow-circle")[0];
 const toggler = document.getElementById("toggler");
