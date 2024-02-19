@@ -111,6 +111,14 @@ button {
   color: var(--heading-color) !important;
 }
 
+.yellow-circle {
+  width: 100px;
+  height: 100px;
+  left: -25px;
+  top: 110px;
+  display: none;
+}
+
 .hero-title {
   font-weight: 700;
   font-size: min(7vw, 2.5rem);
@@ -323,6 +331,18 @@ button {
   box-shadow: 0px 34px 50px -17px rgba(2, 22, 5, 0.1);
 }
 
+.client-scroller > span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--section-color);
+}
+
+.active-client-page {
+  background-color: var(--heading-blue-color) !important;
+}
+
 .form-section {
   background-color: var(--section-color);
 }
@@ -377,6 +397,9 @@ button {
     -o-border-image: linear-gradient(to right, rgb(111, 119, 241), rgb(111, 119, 241) 70%, white 70%, white 80%, rgb(111, 119, 241) 80%, rgb(111, 119, 241));
        border-image: linear-gradient(to right, rgb(111, 119, 241), rgb(111, 119, 241) 70%, white 70%, white 80%, rgb(111, 119, 241) 80%, rgb(111, 119, 241));
     border-image-slice: 1;
+  }
+  .yellow-circle {
+    display: block;
   }
   .hero-title {
     font-size: 4vw;
